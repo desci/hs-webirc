@@ -1,0 +1,40 @@
+/*
+	Descrição: Estilos para o webchat.
+	Autor(es)(as): Não sei, não interessa.
+	Licensa: Copyleft, use o mesmo código com a mesma licensa, com a condição de ninguém ter que te pedir licensa pra usar o código!
+	Disclaimer: Provavelmente copiei algumas ideias de outro código, se achou parecido com o teu código e não gostou, enfia os dedos no cu e rasga! (Metaforicamente).
+*/
+img.fixo {
+	vertical-align: text-bottom;
+}
+ul.horizontal li.horizontal
+{
+	display: inline;
+	list-style-type: none;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+div.livre {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -72px;
+}
+div.barramento {
+	height: 72px;
+}
+div.fixo {
+	/*background-color:#FFFFFF;*/
+	position:fixed;
+	bottom:0;
+	width:100%;
+	overflow:hidden;
+	height: 72x;
+}
+

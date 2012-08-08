@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	<script type="text/javascript" src="scripts/functions.js"></script>
+	<title>Webchat IRC Matehackers</title>
+</head>
+<body onLoad="redimensionaWebchat(window,document);" onResize="redimensionaWebchat(window,document);">
+<div class="livre">
+	<p>Ainda está ruim? Tente a versão somente webchat: <a href="html/webchat.html" target="_self">link</a></p>
+	<a name="a-inicio"></a>
+	<h1 align="center">Webchat IRC Matehackers</h1>
+	<p align="left"><strong>Instruções:</strong>
+		<ul>
+			<li>Digite o nome desejado no campo "Nickname";</li>
+			<li><strong>NÃO</strong> altere o campo "Channels" a menos que saiba o que está fazendo;</li>
+			<li>Digite as palavras da imagem no campo abaixo da mesma. Somente clique em "Reload" caso não consiga enxergar as letras. Se clicar em "Reload" terá que digitar as palavras novamente;</li>
+			<li>Clique no botão "Connect" abaixo. Aguarde e o aplicativo abrirá automaticamente o canal #matehackers no servidor freenodde.</li>
+			<li>Para mandar mensagens privadas, digite "/msg NOME MENSAGEM".</li>
+			<li>Para mais instruções sobre IRC veja a parte de baixo desta página onde está o <a href="#a-guia">Guia rápido de operações comuns no IRC</a>.</li>
+			<li><strong>SE NÃO APARECER O WEBCHAT HABILITE JAVASCRIPT PARA matehackers.org E freenode.net e recarregue a página</strong></li>
+			<li>Para acessar outros canais, altere o campo "Channels" e adicione canais separados por vírgulas sem espaços (por exemplo #matehackers,#garoa,#tarrafa,#hackerspace-cps)</li>
+			<li>Caso seu usuário já seja cadastrado no irc.freenode.net, marque a opção "Auth to services" e preencha os campos apresentados.</li>
+		</ul>
+	</p>
+	<div name="div-webchat">
+		<noscript><strong>Aviso: tem certeza que javascript está habilitado para matehackers.org? Eu acho que não!</strong></noscript>
+		<script type="text/javascript">
+			document.write(testaMSIE8(navigator));
+		</script>
+		<iframe id="webchat" src="http://webchat.freenode.net?channels=matehackers&uio=Mj10cnVlJjQ9dHJ1ZSY5PXRydWUmMTE9MTEz7f" width="647" height="400"></iframe>
+		<p align="center">Ajustar a altura do chat manualmente: 
+			<input id="alturaMenosUm" name="alturaMenosUm" alt="Clique para diminuir em 1 pixel a altura do webchat" type="button" value="-1" onClick="redimensionaWebchatMenosUm(document);"></input>
+			<input id="alturaMaisUm" name="alturaMaisUm" alt="Clique para aumentar em 1 pixel a altura do webchat" type="button" value="+1" onClick="redimensionaWebchatMaisUm(document);"></input>
+			<input id="alturaMenosDez" name="alturaMenosDez" alt="Clique para diminuir em 10 pixels a altura do webchat" type="button" value="-10" onClick="redimensionaWebchatMenosDez(document);"></input>
+			<input id="alturaMaisDez" name="alturaMaisDez" alt="Clique para aumentar em 10 pixels a altura do webchat" type="button" value="+10" onClick="redimensionaWebchatMaisDez(document);"></input>
+			<input id="alturaMenosCem" name="alturaMenosCem" alt="Clique para diminuir em 100 pixels a altura do webchat" type="button" value="-100" onClick="redimensionaWebchatMenosCem(document);"></input>
+			<input id="alturaMaisCem" name="alturaMaisCem" alt="Clique para aumentar em 100 pixels a altura do webchat" type="button" value="+100" onClick="redimensionaWebchatMaisCem(document);"></input>
+			<input id="alturaMenosMil" name="alturaMenosMil" alt="Clique para diminuir em 1000 pixels a altura do webchat" type="button" value="-1000" onClick="redimensionaWebchatMenosMil(document);"></input>
+			<input id="alturaMaisMil" name="alturaMaisMil" alt="Clique para aumentar em 1000 pixels a altura do webchat" type="button" value="+1000" onClick="redimensionaWebchatMaisMil(document);"></input>
+			<input type="button" name="alturaJanela" alt="Clique para extender o webchat para a altura da janela do navegador" value="Altura da janela" onClick="redimensionaWebchatAlturaJanela(window,document);"></input>
+		</p>
+	</div>
+	<div name="div-guia">
+		<a name="a-guia"></a>
+		<h1>Guia rápido de operações comuns no IRC:</h1>
+			<h2>1. Comandos comuns</h2>
+				<ul>
+					<li><strong>/nick NOME</strong> - Altera o nickname para NOME. Lembre-se de que se o nickname já estiver registrado o servidor vai trocar automaticamente caso o mesmo não seja identificado a tempo. Leia mais em "Registro de usuário".</li>
+					<li><strong>/users</strong> - Lista os usuários do canal.</li>
+					<li><strong>/msg NOME MENSAGEM</strong> - Envia MENSAGEM para o usuário NOME. Somente este usuário receberá a mensagem (e quem estiver olhando para o monitor dele(a)).</li>
+					<li><strong>NOME: MENSAGEM</strong> - Envia MENSAGEM para o canal (todo mundo do canal irá ver), porém faz a mensagem mudar de cor para o usuário NOME e emite um alerta sonoro (essa configuração depende do cliente que o usuário NOME estiver usando, alguns usuários desabilitam o som ou outros recursos).</li>
+					<li><strong>AUTOCOMPLETAR</strong> - Quando começar a digitar o nome de um usuário ele será autocompletado pressionando o botão de tabulação. Neste cliente qwebirc (o webchat acima) isso só funciona com a primeira palavra da mensagem. Inclusive o cliente já irá completar com dois pontos e um espaço para mandar uma mensagem pública direta para o usuário em questão.</li>
+					<li><strong>/join CANAL</strong> - Entra no canal CANAL. Segundo as especificações do irc todos canais começam com #. Por exemplo, para entrar no canal #matehackers digite <strong>/join #matehackers</strong></li>
+				</ul>
+			<a href="#a-inicio">Voltar</a>
+			<h2>2. Mensagens diretas privadas e públicas:</h2>
+				<ul>
+					<li>As mensagens que os outros mandam ficam em uma aba na parte superior do webchat com o respectivo nome da pessoa.</li>
+					<li>Novas mensagens fazem o texto da aba mudar para vermelho. Clique na aba com nome da pessoa para ler ou enviar mensagens privadas diretamente.</li>
+					<li>Para voltar para o canal clique na aba #abtdc.</li>
+					<li>Quando alguém te manda uma mensagem direta no canal ela aparece com o teu nick seguido de dois pontos e de cor diferente. Se o flash estiver habilitado também será emitido um aviso sonoro. Se achar ruim tire o volume do frame, da aba do navegador, do navegador inteiro, da placa de som do sistema, do sistema inteiro, do computador inteiro ou do mundo inteiro, dependendo do caso. Ou desabilite o flash que também resolve.</li>
+					<li>Existe um usuário especial chamado NickServ que é um bot que registra nomes de usuário e apelidos. Veja abaixo na parte "Registro de usuário" como fazer para utilizar este serviço.</li>
+				</ul>
+					<h3>2.1. Como mandar mensagens privadas</h3>
+						<ul>
+							<li>Para enviar mensagens privadas, digite <strong>/msg NOME MENSAGEM</strong> onde NOME é o nickname da pessoa (como aparece na lista de usuários) e MENSAGEM é a mensagem que aparecerá como mensagem privada para o usuário. Cuidado pra não errar o comando (não esqueça da barra <strong>/</strong>) pra não mandar a mensagem pra todo canal! Quando estiver em uma janela de mensagem privada (nas abas com o nome do usuário em vez do nome do canal) não é necessário usar o comando /msg. Apenas envie a mensagem que somente aquele usuário receberá.</li>
+						</ul>
+					<h3>2.2. Como mandar mensagens públicas</h3>
+						<ul>
+							<li>Para enviar mensagens públicas para uma pessoa, digite o nome da pessoa seguido de dois pontos e um espaço. Se a pessoa tiver flash habilitado ouvirá um aviso sonoro indicando que alguém mandou mensagem para ela no canal. Por exemplo, para acordar um usuário dormindo na frente do computador envie diversas vezes lfz: para o canal. Esta mensagem aparecerá para todos usuários que estiverem no canal.</li>
+						</ul>
+			<a href="#a-inicio">Voltar</a>
+			<h2>3. Registro de usuário:</h2>
+				<ul>
+					<li>Se o nome for alterado automaticamente é porque já existe esse nome de usuário cadastrado no servidor freenode.</li>
+					<li>Registrar o nome de usuário garante que ninguém consiga entrar nos canais com aquele nome específico. Também dá ao usuário registrado o poder de se tornar operador e até criar seus próprios canais.</li>
+				</ul>
+				<h3>3.1. Como se registrar</h3>
+					<ul>
+						<li>Para registrar um usuário, deve-se enviar mensagens ao usuário NickServ. Para enviar mensagem para um usuário leia acima na seção "Mensagens diretas privadas e públicas". O usuário que a gente quer enviar mensagem é o NickServ, a mensagem é irrelevante, mas vamos mandar um comando que ele entende pra garantir que ele vai responder alguma coisa. Digite <strong>/msg NickServ HELP</strong>. Vai abrir uma aba com o nome NickServ e já com a resposta que é o retorno do comando HELP. Esse comando explica como fazer as coisas, mas se tu não entender inglês continue lendo essa explicação mesmo.</li>
+						<li>Agora NA JANELA DO NICKSERV envie a mensagem <strong>REGISTER senha e-mail</strong> obviamente trocando "senha" pela senha desejada para o cadastro e "e-mail" por um endereço de e-mail válido. O nickname registrado é o nickname atual. Abra o e-mail enviado pela freenode para completar o registro. Lá no e-mail tem a outra mensagem de confirmação que deve ser enviada para o usuário NickServ.</li>
+						<li>Agora quando for entrar de novo marque a caixa "Auth to services" antes de conectar e bote o nome de usuário e senha registrados nas caixas novas que vão aparecer. "Username" e "Nickname" não são a mesma coisa, mas provavelmente fazendo esse registro eles vão ser iguais.</li>
+					</ul> 
+				<h3>3.2. Identificação manual</h3>
+					<ul>
+						<li>A identificação automática funciona no webchat, mas em outros clientes pode ser necessário se autenticar manualmente. O usuário NickServ vai detectar que o teu usuário entrou e vai solicitar identificação imediata caso contrário ele troca o nome. Isso é ótimo porque ninguém consegue acessar os canais usando o teu nome de usuário.</li>
+						<li>Mas como quem fez o registro foi tu e tu sabe a senha então vamos provar para o NickServ isso. É só mandar pra ele a mensagem <strong>IDENTIFY senha</strong> obviamente trocando "senha" pela senha atual. Caso esteja com o nick errado ou queira autenticar outro usuário use <strong>IDENTIFY nome senha</strong> trocando "nome" pelo nickname correto.</li>
+					</ul>
+			<a href="#a-inicio">Voltar</a>
+			<h2>4. Ainda tem dúvidas?</h2>
+				<ul>
+					<li>Este link tem tudo o que se sabe sobre IRC: <a href="http://lmgtfy.com/?q=irc" target="_blank">Tudo sobre IRC</a></li>
+					<li>Peça ajuda ao usuário iuriguilherme no canal que se ele não estiver trabalhando ele pode responder também.</li>
+				</ul>
+		<a href="#a-inicio">Voltar</a>
+	</div>
+</div>
+<div class="barramento"></div>
+<div class="fixo">
+	<hr>
+	<p align="center">
+		<span name="default">Usuários que contribuem para a manutenção desta página: </span>
+		<span name="iuriguilherme">
+			<!--<a href="_blank">-->Iuri Guilherme<!--</a>--> (<a href="mailto:iuri.guilherme.meta@gmail.com?Subject=[matehackers]%20Webchat">enviar e-mail</a>) 
+		</span>
+		<span name="fulano"> </span>
+		<span name="ciclano"> </span>
+		<span name="beltrano"> </span>
+	</p>
+</div>
+</body>
+</html>
