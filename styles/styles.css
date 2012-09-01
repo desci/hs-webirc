@@ -1,8 +1,23 @@
 /*
-	Descrição: Estilos para o webchat.
-	Autor(es)(as): Não sei, não interessa.
-	Licensa: Copyleft, use o mesmo código com a mesma licensa, com a condição de ninguém ter que te pedir licensa pra usar o código!
-	Disclaimer: Provavelmente copiei algumas ideias de outro código, se achou parecido com o teu código e não gostou, enfia os dedos no cu e rasga! (Metaforicamente).
+	Copyleft 2012
+
+	Este arquivo é parte de hs-webirc.
+
+	hs-webirc é um software livre; você pode redistribui-lo e/ou
+	modifica-lo dentro dos termos da Licença Pública Geral GNU como
+	publicada pela Fundação do Software Livre (FSF); na versão 3 da
+	Licença.
+
+	Este programa é distribuido na esperança que possa ser útil,
+	mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUAÇÂO
+	a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a
+	Licença Pública Geral GNU para maiores detalhes.
+
+	Você deve ter recebido uma cópia da Licença Pública Geral GNU
+	junto com este programa, se não, escreva para a Fundação do
+	Software Livre(FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA
+	02110-1301 USA.
+
 */
 img.fixo {
 	vertical-align: text-bottom;
