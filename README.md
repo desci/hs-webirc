@@ -24,10 +24,24 @@ Licensa:
 
 Descrição:
 
-	Um conjunto de páginas html para adicionar coisas que eu considero úteis em uma página com um webirc, com a intenção de facilitar o acesso a quem não está acostumado com o protocolo e não ficar no caminho de quem já está.
-	hs-webirc utiliza html, css e javascript. Devido à forma como é implementado o webchat encontrado em webchat.freenode.net, sugerido aqui como padrão, não há como utilizar o webchat se o cliente não tiver suporte a javascript. Contudo, outras implementações de webirc podem ser utilizadas no lugar desta do freenode junto com o hs-webirc.
+	Um conjunto de páginas html para adicionar coisas que eu considero
+	úteis em uma página com um webirc, com a intenção de facilitar o
+	acesso a quem não está acostumado com o protocolo e não ficar no
+	caminho de quem já está acostumado.
+
+	hs-webirc utiliza html, css e javascript. Devido à forma como é
+	implementado o webchat encontrado em webchat.freenode.net,
+	sugerido aqui como padrão, não há como utilizar o webchat se o
+	cliente não tiver suporte a javascript. Contudo, outras
+	implementações de webirc podem ser utilizadas no lugar desta do
+	freenode junto com o hs-webirc.
 
 Instruções:
 
-	Para utilizar altere o arquivo html/webchat.html e cole lá o código ou o link para o webirc pré configurado em webchat.freenode.net ou outro lugar. Recomendo que utilize o aplicativo encontrado em webchat.freenode.net para gerar um iframe específico para a necessidade de cada um.
-	Arquivos podem ser hospedados em um diretório de um servidor web (por exemplo http://matehackers.org:80/irc).
+	Para utilizar altere o arquivo html/webchat.html e cole lá o
+	código ou o link para o webirc pré configurado em
+	webchat.freenode.net ou outro lugar. Recomendo que utilize o
+	aplicativo encontrado em webchat.freenode.net para gerar um iframe
+	específico para a necessidade de cada um.
+	Arquivos podem ser hospedados em um diretório de um servidor web
+	(por exemplo http://matehackers.org:80/irc).
